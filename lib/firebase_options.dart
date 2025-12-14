@@ -17,16 +17,24 @@ import 'package:flutter/foundation.dart'
 class DefaultFirebaseOptions {
   static FirebaseOptions get currentPlatform {
     if (kIsWeb) {
-      throw UnsupportedError(
-        'DefaultFirebaseOptions have not been configured for web - '
-        'you can reconfigure this by running the FlutterFire CLI again.',
+      return const FirebaseOptions(
+        apiKey: 'AIzaSyCQhwEA6Ral7EsLh4Z1ZQODJqciy1z4bX4',
+        appId: '1:559681981354:web:56ec57b2d115235f0639d3',
+        messagingSenderId: '559681981354',
+        projectId: 'braceletlifesaver',
+        authDomain: 'braceletlifesaver.firebaseapp.com',
+        databaseURL: 'https://braceletlifesaver-default-rtdb.firebaseio.com/',
+        storageBucket: 'braceletlifesaver.firebasestorage.app',
       );
     }
     switch (defaultTargetPlatform) {
       case TargetPlatform.android:
-        throw UnsupportedError(
-          'DefaultFirebaseOptions have not been configured for android - '
-          'you can reconfigure this by running the FlutterFire CLI again.',
+        return const FirebaseOptions(
+          apiKey: 'AIzaSyCQhwEA6Ral7EsLh4Z1ZQODJqciy1z4bX4',
+          appId: '1:559681981354:android:c51c6f03164d68060639d3',
+          messagingSenderId: '559681981354',
+          projectId: 'braceletlifesaver',
+          databaseURL: 'https://braceletlifesaver-default-rtdb.firebaseio.com/',
         );
       case TargetPlatform.iOS:
         throw UnsupportedError(
